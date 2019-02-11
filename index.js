@@ -140,7 +140,7 @@ async function writeRecords(records) {
   try {
     await writeFile(
       destinationPath,
-      JSON.stringify(recordsWithoutChanges, null, 2),
+      JSON.stringify({ leads: recordsWithoutChanges }, null, 2),
     );
 
     return true;
